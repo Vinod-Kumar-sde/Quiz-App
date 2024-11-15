@@ -1,0 +1,2 @@
+https://opentdb.com/api.php?amount=10&category=9&difficulty=medium&type=multiple&encode=url3986
+ https://the-trivia-api.com/v2/questions

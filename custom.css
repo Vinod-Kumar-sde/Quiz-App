@@ -1,0 +1,120 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap');
+.main {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url(qu.jpg);
+    background-size: cover;  /* Ensure the image covers the entire page */
+  background-position: center;  /* Center the image */
+  background-repeat: no-repeat; 
+
+}
+
+
+
+.container {
+    width: 35rem;
+    border: 2.5px solid black;
+    box-shadow: 10px 30px 50px 10px rgb(0, 0, 0);
+    display: flex;
+    background-color: white;
+    border-radius: 15px;
+    overflow: hidden;
+    flex-direction: column;
+}
+
+.col {
+    text-align: justify;
+    padding: 15px;
+    width: 100%;
+    border: 1px solid black;
+    cursor: pointer;
+    user-select: none;
+}
+
+#submit {
+    width: 96%;
+    background-color:  rgb(105, 26, 157);
+    transition: 0.5s;
+    color: white;
+    outline: none;
+    border: none;
+    font-size: 25px;
+    display: block;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: rgb(255, 253, 255);
+    transition: 0.5s;
+    color: white;
+    outline: none;
+    border: none;
+    font-size: 25px;
+    padding: 10px;
+    cursor: pointer;
+    gap: 5px;
+}
+#Check{
+
+    width: 50%;
+    background-color: rgb(105, 26, 157);
+    transition: 0.5s;
+    color: white;
+    outline: none;
+    border: none;
+    font-size: 25px;
+    display: block;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 10px;
+
+}
+#Next{
+
+    width: 50%;
+    background-color: rgb(105, 26, 157);
+    transition: 0.5s;
+    color: white;
+    outline: none;
+    border: none;
+    font-size: 25px;
+    display: block;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 10px;
+
+}
+
+
+
+#submit:hover {
+    background-color: rgb(34, 6, 53);
+}
+#Check:hover {
+    background-color: rgb(34, 6, 53);
+}
+#Next:hover {
+    background-color: rgb(34, 6, 53);
+}
+
+.box {
+    box-shadow: 0px -1px 1px grey;
+    width: 100%;
+}
