@@ -5,46 +5,81 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Interactive Quiz App</title>
     <link rel="stylesheet" href="custom.css" />
-    <script src="script.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <section class="main">
-
         <div class="container">
-          
-            <div class="col">
+            <div class="quiz-header">
+                <div class="progress-bar">
+                    <div class="progress" id="progressBar"></div>
+                </div>
+                <div class="question-counter">
+                    <span id="questionNumber">1</span> / <span id="totalQuestions">10</span>
+                </div>
+            </div>
+            
+            <div class="question-section">
                 <h3 id="questionBox">
-                    Wait reloading the page...
+                    <div class="loading-spinner"></div>
+                    Loading question...
                 </h3>
             </div>
-            <div class="col box1">
-                <input  name="option" type="radio" id="first" value="a" required>
-                <label class="option" for="first">C1</label>
+            
+            <div class="options-section">
+                <div class="option-wrapper">
+                    <input name="option" type="radio" id="first" value="a">
+                    <label class="option" for="first">
+                        <span class="option-letter">A</span>
+                        <span class="option-text" id="option1">Loading...</span>
+                    </label>
+                </div>
+                <div class="option-wrapper">
+                    <input name="option" type="radio" id="second" value="b">
+                    <label class="option" for="second">
+                        <span class="option-letter">B</span>
+                        <span class="option-text" id="option2">Loading...</span>
+                    </label>
+                </div>
+                <div class="option-wrapper">
+                    <input name="option" type="radio" id="third" value="c">
+                    <label class="option" for="third">
+                        <span class="option-letter">C</span>
+                        <span class="option-text" id="option3">Loading...</span>
+                    </label>
+                </div>
+                <div class="option-wrapper">
+                    <input name="option" type="radio" id="fourth" value="d">
+                    <label class="option" for="fourth">
+                        <span class="option-letter">D</span>
+                        <span class="option-text" id="option4">Loading...</span>
+                    </label>
+                </div>
             </div>
-            <div class="col box2">
-                <input name="option"  type="radio" id="second" value="b" required>
-                <label class="option"for="second">C2</label>
+            
+            <div class="buttons-section">
+                <button id="Check" class="btn btn-check" disabled>Check Answer</button>
+                <button id="Next" class="btn btn-next" style="display: none;">Next Question</button>
+                <button id="Finish" class="btn btn-finish" style="display: none;">Finish Quiz</button>
             </div>
-            <div class="col box3">
-                <input name="option" type="radio" id="third" value="c" required>
-                <label class="option"for="third">C3</label>
-            </div>
-            <div class="col box4">
-                <input name="option" type="radio" id="fourth" value="d" required>
-                <label class="option"for="fourth">C4</label>
-            </div>
-            <button id="submit">Submit</button>
-            <div class="buttons">
-               <button id="Check">Check</button>
-               <button id="Next">Next</button>
+            
+            <div class="score-section" id="scoreSection" style="display: none;">
+                <h2>Quiz Complete!</h2>
+                <div class="final-score">
+                    Your Score: <span id="finalScore">0</span> / <span id="finalTotal">10</span>
+                </div>
+                <div class="score-percentage" id="scorePercentage">0%</div>
+                <button id="Restart" class="btn btn-restart">Start New Quiz</button>
             </div>
         </div>
-
     </section>
     
+    <script src="script.js"></script>
 </body>
 
 </html>
